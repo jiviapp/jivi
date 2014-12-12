@@ -1,0 +1,526 @@
+body {
+	font-family: Roboto, sans-serif, arial;
+	font-weight: normal;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+    -webkit-font-smoothing: antialiased;	
+}
+
+input[type="text"] {
+	border-radius: 0;
+}
+
+::-webkit-input-placeholder {
+	color: #fff;
+}
+:-moz-placeholder { 
+	color: #fff;
+   	opacity: 1;
+}
+::-moz-placeholder { 
+   	color: #fff;
+   	opacity: 1;
+}
+:-ms-input-placeholder {
+   	color: #fff;
+}
+
+.found_error::-webkit-input-placeholder {
+	color: #f74854;
+}
+.found_error:-moz-placeholder {
+	color: #f74854;
+}
+.found_error::-moz-placeholder {
+	color: #f74854;
+}
+.found_error:-ms-input-placeholder {
+	color: #f74854;
+}
+
+.hidden {
+	display: none;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.background {
+	background: url("../../assets/images/background_default.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 100%;
+  	height: 100vh;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	margin: 0px;
+}
+
+.background#success {
+	background: url("../../assets/images/background_success.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.background#hiring {
+	background: url("../../assets/images/background_hiring.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;	
+}
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.container {
+	margin: 60px auto;
+	width: 800px;
+	text-align: center;
+}
+
+.container .logo {
+	background-image: url("../../assets/images/logo.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: auto auto 60px;
+	width: 166px;
+	height: 166px;
+}
+
+.container .headline {
+	font-size: 35px;
+	font-weight: 500;
+	color: #FFD84E;
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	letter-spacing: 1px;
+}
+
+.container .text {
+	font-size: 17px;
+	font-weight: 400;	
+	color: #fff;
+	margin-top: 10px;
+	line-height: 1.2;
+}
+
+.container .text p {
+	margin: 5px 0px;
+}
+
+.container .form {
+	width: 250px;
+	margin: 30px auto auto;
+}
+
+.container .form .field {
+	width: 100%;
+}
+
+.container .form .field .icon-username, .container .form .field .icon-email {
+	position: absolute;
+	margin-top: 27.5px;
+	margin-left: 15px;
+	z-index: 2;
+}
+
+.container .form .field .icon-username {
+	width: 20px;
+	height: 20px;
+}
+
+.container .form .field .icon-email {
+	width: 20px;
+	height: 15px;
+	margin-top: 29px;
+}
+
+.container .form .field:first-child input {
+	border-bottom: 0px;
+}
+
+.container .form .field input {
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: 300;
+	background: transparent;
+	color: #fff;
+	width: 100%;
+	height: 70px;
+	padding: 30px 15px;
+	border: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	outline: none;
+	-webkit-appearance: none !important;
+	-moz-box-shadow: none !important;
+	 -webkit-box-shadow: none !important;
+	 box-shadow: none !important;	
+	box-sizing: border-box;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;	
+	box-sizing: border-box;
+}
+
+.container .form .field input.smaller {
+	padding: 30px 15px 30px 45px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;	
+}
+
+.container .form button {
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #fff;
+	color: #333;
+	width: 100%;
+	height: 50px;
+	margin-top: 25px;
+	border-radius: 35px;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.container .form button:hover {
+	background-color: #FFD84E;
+}
+
+.container .cta {
+	font-size: 13px;
+	color: #fff;
+	width: 100%;
+	margin: 55px auto auto;	
+	line-height: 1.4;
+}
+
+.container .cta.social {
+	margin: 118px auto auto;	
+}
+
+.container .cta h3 {
+	font-size: 17px;
+	font-weight: normal;
+	color: #FFD84E;
+	margin-top: -10px;
+}
+
+.container .cta a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container .cta .share {
+	margin: 20px auto;
+	width: 241px;
+}
+
+.container .cta .share a {
+	margin: 0px 30px 0px auto;
+	width: 60px;
+	height: 60px;
+	float: left;
+	text-decoration: none;
+	border: 0;
+}
+
+.container .cta .share a:hover {
+	margin: 1px 30px 0px auto;
+}
+
+.container .cta .share a:last-child {
+	margin-right: 0px;
+}
+
+.container .cta .share a img {
+	width: inherit;
+	height: inherit;
+}
+
+.container .bottom {
+	font-size: 10px;
+	font-weight: 500;
+	background: transparent;
+	color: #fff;
+	width: 200px;
+	position: relative;
+	margin-top: 60px;
+	text-transform: uppercase;
+	line-height: 2;
+	display: inline-block;
+	transform: scale(1, 1.1);
+	-webkit-transform: scale(1, 1.1);
+	-moz-transform: scale(1, 1.1); 
+	-ms-transform: scale(1, 1.1);
+	-o-transform: scale(1, 1.1); 
+}
+
+.container .bottom:hover {
+	color: #FFD84E;
+	margin-top: 61px;
+}
+
+.container .bottom a {
+	color: inherit;
+	text-decoration: none;
+	border: 0;
+	letter-spacing: 1.5px;
+}
+
+.container .bottom a img {
+	width: 27px;
+}
+
+.container .bottom a.hiring img {
+	width: 21px;
+}
+
+@media screen and (device-width: 1920px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.container {
+		margin: 50px auto;
+	}
+
+	.container .logo {
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: auto auto 50px;
+		width: 234px;
+		height: 234px;
+	}
+
+	.container .headline {
+		font-size: 50px;
+	}
+
+	.container .text {
+		font-size: 24px;
+	}
+
+	.container .form {
+		width: 350px;
+		margin: 60px auto auto;
+	}
+
+	.container .form .field .icon-username, .container .form .field .icon-email {
+		position: absolute;
+		margin-top: 35px;
+		margin-left: 20px;
+		z-index: 2;
+	}
+
+	.container .form .field .icon-username {
+		width: 30px;
+		height: 30px;
+	}
+
+	.container .form .field .icon-email {
+		width: 30px;
+		height: 25px;
+		margin-top: 36.5px;
+	}
+
+	.container .form .field input {
+		font-size: 18px;
+		height: 100px;
+		padding: 30px 20px;
+	}
+
+	.container .form .field input.smaller {
+		padding: 30px 20px 30px 65px;
+	}
+
+	.container .form button {
+		font-size: 20px;
+		height: 70px;
+		margin-top: 40px;
+	}
+
+	.container .cta {
+		font-size: 18px;
+	}
+
+	.container .cta.social {
+		margin: 186px auto auto;	
+	}
+
+	.container .cta h3 {
+		font-size: 24px;
+	}
+
+	.container .cta .share {
+		margin: 30px auto;
+		width: 290px;
+	}
+
+	.container .cta .share a {
+		margin: 0px 40px 0px auto;
+		width: 70px;
+		height: 70px;
+	}
+
+	.container .bottom {
+		font-size: 13px;
+	}
+
+	.container .bottom a.hiring img {
+		width: 29px;
+	}
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
+	body {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+  	select:focus, textarea:focus, input:focus {
+		font-size: 16px;
+  	}
+
+	.background {
+		background: url("../../assets/images/background_default_mobile.png") no-repeat center center fixed; 
+		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+  	}
+
+	.container {
+		width: 100%;
+		margin: 20px auto;
+	}
+
+	.container .logo {
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: auto auto 20px;
+		width: 110px;
+		height: 110px;
+	}
+
+	.container .headline {
+		font-size: 22px;
+		letter-spacing: 0.5px;
+	}
+
+	.container .text {
+		font-size: 14px;
+		width: calc(100% - 5px);
+		line-height: 1.2;
+	}
+
+	.container .form {
+		width: 75%;
+		margin: 20px auto auto;
+	}
+
+	.container .form .field .icon-username, .container .form .field .icon-email {
+		margin-top: 17px;
+		margin-left: 10px;
+	}
+
+	.container .form .field .icon-username {
+		width: 20px;
+		height: 20px;
+	}
+
+	.container .form .field .icon-email {
+		width: 20px;
+		height: 15px;
+		margin-top: 18.5px;
+	}
+
+	.container .form .field input {
+		font-size: 13px;
+		height: 50px;
+		padding: 5px;
+	}
+
+	.container .form .field input.smaller {
+		padding: 15px 5px 15px 40px;
+	    -webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;	
+	}
+
+	.container .form button {
+		font-size: 14px;
+		font-weight: 600;
+		margin-top: 20px;
+		padding: 10px 10px;
+		height: 40px;
+		border-radius: 60px;
+	}
+
+	.container .cta {
+		font-size: 13px;
+		margin: 30px auto auto;	
+	}
+
+	.container .cta h3 {
+		font-size: 15px;
+		margin-top: -10px;
+	}	
+
+	.container .cta .share {
+		width: 240px;
+	}
+
+	.container .cta .social a img {
+		width: 40px;
+	}
+
+	.container .bottom {
+		font-size: 8px;
+		position: relative;
+		bottom: auto;
+		left: auto;
+		margin: 25px auto auto;
+	}
+
+	.container .bottom:hover {
+		color: #fff;
+		margin: 25px auto auto;
+	}
+
+	.container .bottom a img {
+		width: 20px;
+	}
+}
