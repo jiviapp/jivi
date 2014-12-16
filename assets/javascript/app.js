@@ -117,12 +117,6 @@ App = {
 			$(".background").attr("id", "hiring");
 
 			$(".hiring").removeClass("hidden");
-
-			var state = {
-				"toggled_hiring": true
-			};
-			history.pushState(state, "Jivi - we're hiring!", "/hiring");
-			expect(history.state).toEqual(state);
 		})
 
 		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i).test(navigator.userAgent)) {
