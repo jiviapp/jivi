@@ -185,12 +185,13 @@ input[type="text"] {
 	-moz-box-shadow: none !important;
 	 -webkit-box-shadow: none !important;
 	 box-shadow: none !important;	
-	box-sizing: border-box;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;	
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 }
 
 .container .form .field input.smaller {
