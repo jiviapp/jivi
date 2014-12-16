@@ -3,7 +3,7 @@
 	<head>
 		<title>Jivi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="assets/css/fonts.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
@@ -15,16 +15,24 @@
 		<!-- Pre-load some images -->
 		<img src="assets/images/background_default.png" class="hidden" />
 		<img src="assets/images/background_success.png" class="hidden" />
+		<img src="assets/images/background_hiring.png" class="hidden" />
 		<img src="assets/images/hiring_yellow.svg" class="hidden" />
 
 		<div class="wrapper">
 			<div class="container">
 				<div class="logo"></div>
 				<h1 class="headline default">WEB SERIES YOU'D LOVE</h1>
+				<h1 class="headline hiring hidden">WE'RE HIRING</h1>
 				<div class="text default">
 					<p>Web television should be fun and social.</p>
 					<p>Reserve your username in the next</p>
 					<p>generation video network.</p> 
+				</div>
+				<div class="text hiring hidden">
+					<p>The next X-Factor is going to be web-first.</p>
+					<p>Do you want to build the future of digital TV?</p>
+					<p>We are looking for engineers, </p>
+					<p>content editors and community managers.</p>
 				</div>
 				<div class="form default">
 					<div class="field username_field">
@@ -37,8 +45,13 @@
 					</div>
 					<button class="reserve-spot">RESERVE!</button>
 				</div>
+				<div class="cta hiring hidden">
+					<p>Shoot us an email</p>
+					<h3><a href="mailto:join@jivi.tv">join@jivi.tv</a></h3>
+				</div>
 				<div class="bottom">
-					<a href="/hiring.html" data-action="toggle_hiring" class="default"><img src="assets/images/hiring_white.svg" /><br />WE'RE HIRING</a>
+					<a href="javascript:void(0);" data-action="toggle_hiring" class="default"><img src="assets/images/hiring_white.svg" /><br />WE'RE HIRING</a>
+					<a href="javascript:void(0);" data-action="close_hiring" class="hiring hidden"><img src="assets/images/close.png" /></a>
 				</div>
 			</div>
 		</div>
