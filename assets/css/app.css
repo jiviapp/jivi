@@ -13,9 +13,11 @@ body {
 input[type="text"] {
 	border-radius: 0;
 }
-::-moz-input[type="text"] { 
-	border-radius: 0;
-	padding: 0px !important;
+@-moz-document url-prefix() { 
+	input[type="text"] { 
+		border-radius: 0;
+		padding: 0px !important;
+	}
 }
 
 ::-webkit-input-placeholder {
