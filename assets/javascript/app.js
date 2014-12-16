@@ -9,7 +9,6 @@ App = {
 		
 		return /^[a-z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,4}$/.test(a) && /^(?=.{1,64}@.{4,64}$)(?=.{6,100}$).*/.test(a);
 	},
-	hasReservedPlace: false,
 	bindEvents: function(){
 		$(".form .field input[type='text']").on("focus", function(){
 			var label = $(this).attr("data-icon-label");
@@ -96,8 +95,6 @@ App = {
 									"</div>" +
 								"").insertAfter(".form.default");
 								$(".form.default").remove();
-
-								App.hasReservedPlace = true;
 							}
 						});
 					}
@@ -112,13 +109,6 @@ App = {
 			$(this).removeClass("found_error");
 		});
 
-		$("a[data-action='toggle_hiring']").on("click", function(){
-			$(".default").addClass("hidden");
-			$(".background").attr("id", "hiring");
-
-			$(".hiring").removeClass("hidden");
-		})
-
 		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i).test(navigator.userAgent)) {
 			$(".bottom").on("mouseover", function(){
 				var src = $("a[data-action='toggle_hiring'] img").attr("src");
@@ -131,17 +121,6 @@ App = {
 				$("a[data-action='toggle_hiring'] img").attr("src", src.replace("_yellow", "_white"));
 			});
 		}
-
-		$("a[data-action='close_hiring']").on("click", function(){
-			$(".hiring").addClass("hidden");
-
-			if (App.hasReservedPlace)
-				$(".background").attr("id", "success");
-			else
-				$(".background").attr("id", "");
-
-			$(".default").removeClass("hidden");			
-		});
 
 		$("a[data-action='toggle_hiring']").addClass("animated bounceInUp");
 
