@@ -142,7 +142,7 @@ input[type="text"] {
 
 .container .form .field .icon-username, .container .form .field .icon-email {
 	position: absolute;
-	margin-top: 29px;
+	margin-top: 31px;
 	margin-left: 15px;
 	z-index: 2;
 }
@@ -155,7 +155,7 @@ input[type="text"] {
 .container .form .field .icon-email {
 	width: 20px;
 	height: 15px;
-	margin-top: 31px;
+	margin-top: 33px;
 }
 
 .container .form .field:first-child input {
