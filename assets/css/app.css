@@ -142,7 +142,7 @@ input[type="text"] {
 
 .container .form .field .icon-username, .container .form .field .icon-email {
 	position: absolute;
-	margin-top: 31px;
+	margin-top: 27.5px;
 	margin-left: 15px;
 	z-index: 2;
 }
@@ -155,7 +155,7 @@ input[type="text"] {
 .container .form .field .icon-email {
 	width: 20px;
 	height: 15px;
-	margin-top: 33px;
+	margin-top: 29px;
 }
 
 .container .form .field:first-child input {
@@ -169,8 +169,7 @@ input[type="text"] {
 	background: transparent;
 	color: #fff;
 	width: 100%;
-	min-height: 70px;
-	height: auto;
+	height: 70px;
 	padding: 30px 15px;
 	border: 0;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -187,6 +186,31 @@ input[type="text"] {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
+}
+
+@-moz-document url-prefix() { 
+	.container .form .field .icon-username, .container .form .field .icon-email {
+		position: absolute;
+		margin-top: 31px;
+		margin-left: 15px;
+		z-index: 2;
+	}
+
+	.container .form .field .icon-username {
+		width: 20px;
+		height: 20px;
+	}
+
+	.container .form .field .icon-email {
+		width: 20px;
+		height: 15px;
+		margin-top: 33px;
+	}
+
+	.container .form .field input { 
+		min-height: 70px;
+		height: auto !important;
+	}
 }
 
 .container .form .field input.smaller {
