@@ -1,5 +1,5 @@
 var App = function (){
-		this.firebase = new Firebase("https://jiviapp.firebaseio.com/users/");
+    this.firebase = new Firebase("https://jiviapp.firebaseio.com/users/");
 };
 
 App.prototype.isInputValid = function (val, type){    
