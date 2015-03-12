@@ -131,6 +131,7 @@ App = {
 		}
 
 		$("a[data-action='close_hiring']").on("click", function(){
+			$(".background").attr("id", "");            
 			$(".hiring").addClass("hidden");
 
 			$(".default").removeClass("hidden");			
