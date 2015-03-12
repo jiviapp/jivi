@@ -68,14 +68,6 @@ input[type="text"] {
   	margin: 0px;
 }
 
-.background#success {
-	background: url("../../assets/images/background_success.png") no-repeat center center fixed; 
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
-
 .background#hiring {
 	background: url("../../assets/images/background_hiring.png") no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -437,14 +429,6 @@ input[type="text"] {
 
   	select:focus, textarea:focus, input:focus {
 		font-size: 16px;
-  	}
-
-	.background {
-		background: url("../../assets/images/background_default_mobile.png") no-repeat center center fixed; 
-		-webkit-background-size: cover;
-	  	-moz-background-size: cover;
-	  	-o-background-size: cover;
-	  	background-size: cover;
   	}
 
 	.container {

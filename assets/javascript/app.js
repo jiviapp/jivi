@@ -80,8 +80,6 @@ App = {
 							created_at: new Date()
 						}, function(error){
 							if (!error){
-								$(".background").attr("id", "success");
-
 								$(".headline.default").text("HOWDY!");
 								$(".text.default").text("@" + username + " is reserved for you!");
 
@@ -134,11 +132,6 @@ App = {
 
 		$("a[data-action='close_hiring']").on("click", function(){
 			$(".hiring").addClass("hidden");
-
-			if (App.hasReservedPlace)
-				$(".background").attr("id", "success");
-			else
-				$(".background").attr("id", "");
 
 			$(".default").removeClass("hidden");			
 		});
