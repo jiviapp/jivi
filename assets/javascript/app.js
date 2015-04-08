@@ -2,7 +2,7 @@ var App = function (){
     this.firebase = new Firebase("https://jiviapp.firebaseio.com/users/");
 };
 
-App.prototype.isInputValid = function (val, type){    
+App.prototype.isInputValid = function (val, type){
     if (type === "username")
         return /^[a-zA-Z0-9]+$/.test(val);
 
@@ -11,7 +11,7 @@ App.prototype.isInputValid = function (val, type){
 
 App.prototype.bindEvents = function(){
     var self = this;
-    
+
     $(".form .field input[type='text']").on("focus", function(){
         var label = $(this).attr("data-icon-label");
 
@@ -49,31 +49,31 @@ App.prototype.bindEvents = function(){
     $(".form button.reserve-spot").on("click", function(){
         var username = $(".form input.username").val();
         var email = $(".form input.email").val();
-        var usernameIsValid = self.isInputValid(username, "username");
-        var emailIsValid = self.isInputValid(email, "email");
-        var animationType = "flash";
+        var username_is_valid = self.isInputValid(username, "username");
+        var email_is_valid = self.isInputValid(email, "email");
+        var animation_type = "flash";
 
-        var onError = function (fieldType, text){
-            var errorImg = (fieldType === "username" ? "assets/images/username_wrong.svg" : "assets/images/email_wrong.svg");
+        var onError = function (field_type, text){
+            var error_img = (field_type === "username" ? "assets/images/username_wrong.svg" : "assets/images/email_wrong.svg");
 
-            $(".form ." + fieldType + "_field img").attr("src", errorImg);
-            $(".form ." + fieldType + "_field input").addClass("found_error");
-            $(".form ." + fieldType + "_field input").val("");
-            $(".form ." + fieldType + "_field input").attr("placeholder", text);
+            $(".form ." + field_type + "_field img").attr("src", error_img);
+            $(".form ." + field_type + "_field input").addClass("found_error");
+            $(".form ." + field_type + "_field input").val("");
+            $(".form ." + field_type + "_field input").attr("placeholder", text);
         };
 
-        if (!usernameIsValid)
+        if (!username_is_valid)
             onError("username", "USERNAME IS INVALID");
 
-        if (!emailIsValid)
+        if (!email_is_valid)
             onError("email", "EMAIL IS INVALID");
 
         setTimeout(function(){
-            $(".form input.username").removeClass(animationType);
-            $(".form input.email").removeClass(animationType);
-        }, 1500); 
+            $(".form input.username").removeClass(animation_type);
+            $(".form input.email").removeClass(animation_type);
+        }, 1500);
 
-        if (usernameIsValid && emailIsValid){
+        if (username_is_valid && email_is_valid){
             self.firebase.child(username).once('value', function(e) {
                 if (!e.val()) {
                     self.firebase.child(username).set({
@@ -90,7 +90,7 @@ App.prototype.bindEvents = function(){
                                     "<p class='share clearfix'>" +
                                         "<a href='https://twitter.com/share?url=http://www.jivi.tv' class='clearfix' target='_blank'><img src='assets/images/twitter_default.svg' /></a>" +
                                         "<a href='http://www.facebook.com/sharer/sharer.php?u=http://www.jivi.tv' class='clearfix' target='_blank'><img src='assets/images/facebook_default.svg' /></a>" +
-                                        "<a href='https://plus.google.com/share?url=http://www.jivi.tv' class='clearfix' target='_blank'><img src='assets/images/googleplus_default.svg' /></a>" +			
+                                        "<a href='https://plus.google.com/share?url=http://www.jivi.tv' class='clearfix' target='_blank'><img src='assets/images/googleplus_default.svg' /></a>" +
                                     "</p>" +
                                 "</div>" +
                             "").insertAfter(".form.default");
@@ -130,10 +130,10 @@ App.prototype.bindEvents = function(){
     }
 
     $("a[data-action='close_hiring']").on("click", function(){
-        $(".background").attr("id", "");            
+        $(".background").attr("id", "");
         $(".hiring").addClass("hidden");
 
-        $(".default").removeClass("hidden");			
+        $(".default").removeClass("hidden");
     });
 
     $("a[data-action='toggle_hiring']").addClass("animated bounceInUp");
@@ -151,6 +151,6 @@ App.prototype.bindEvents = function(){
 };
 
 $(document).ready(function(){
-	var app = new App;
+    var app = new App;
     app.bindEvents();
 });
